@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gasto Energético</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <nav>
+        <a href="#">Proteinas</a>
+        <a href="#">Carboidratos</a>
+        <a href="#">Gorduras</a>
+        <a href="#">Atividades</a>
+    </nav>
+    
+    
+<section class="hero" id="img">
+    <div class="info_energetic">
+            <h1>O que é Gasto Energético Total</h1>
+            <p>O Gasto Energético Total (GET) é a quantidade de energia ou calorias, que uma pessoa precisa para garantir o bom desempenho de atividades fundamentais, como respiração, circulação sanguínea, digestão de alimentos e atividades físicas.</p><br>
+            <p>O gasto diário de energia nada mais é que o número total de calorias que seu corpo queima. Assim sendo, para evitar ganho de peso, é preciso encontrar o equilíbrio entre a ingestão de calorias e o gasto energético diário.</p><br>
+            <p>Como já antecipamos acima, o GET varia de pessoa para pessoa, dependendo de sua composição corporal, genética, gênero e medidas. A média desse gasto diário para um homem sedentário, por exemplo, é de 1800 calorias por dia, mas o gasto de um homem de porte maior pode chegar a 2000 calorias.</p><br>
+            <p>Para emagrecer, o paciente precisa manter o gasto energético total seja superior à energia consumida no plano alimentar, e, para engordar, deve fazer justamente o oposto.</p>
+    </div>
+
+    <div class="instructions">
+        <h2>Instruções</h2>
+        <ul>
+            <li>
+            <strong>Exercício :</strong> 15-30 minutos de atividade de frequência
+            cardíaca elevada.
+            </li>
+            <li>
+            <strong>Exercício intenso :</strong> 45-120 minutos de atividade de
+            frequência cardíaca elevada.
+            </li>
+            <li>
+            <strong>Exercício muito intenso :</strong> Mais de 2 horas de
+            atividade de frequência cardíaca elevada
+            </li>
+        </ul>
+    </div>
+    
+      <div class="container-form">
+          <form id="form">
+            <h1>Gasto Calorico Basal</h1>
+          <div class="form-group">
+            <label for="age">Idade</label>
+            <input type="number" id="age" />
+          </div>
+
+          <div class="form-group">
+            <label for="gender">Gênero</label>
+            <select id="gender">
+              <option value="male">Masculino</option>
+              <option value="female">Feminino</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="height">Altura</label>
+            <input type="number" id="height" placeholder="CM" />
+          </div>
+
+          <div class="form-group">
+            <label for="weight">Peso</label>
+            <input type="number" id="weight" placeholder="KG" />
+          </div>
+
+          <div class="form-group">
+            <label for="activity-level">Atividade Física</label>
+            <select id="activity-level">
+              <option value="0">Sedentário: pouco ou nenhum exercício</option>
+              <option value="2">Leve: exercício 1-3 vezes/semana</option>
+              <option value="3">Moderado: exercício 4-5 vezes/semana</option>
+              <option value="4">
+                Ativo: exercício intenso 6-7 vezes/semana
+              </option>
+              <option value="5">
+                Muito Ativo: exercício diário muito intenso, ou trabalho físico
+              </option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <button type="submit">Calcular!</button>
+          </div>
+        </form>
+        <div class="result-container" id="result"></div>
+</section>              
+</body>
+</html>

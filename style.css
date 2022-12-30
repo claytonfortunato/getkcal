@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #333;
+  width: 100%;
+}
+
+nav {
+  background-color: #eee;
+
+  height: 80px;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+section#img {
+  background-image: url(img/alimentacao.jpg);
+  background-position: center center;
+
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.info_energetic {
+  max-height: 800px;
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.container-form {
+  max-height: 600px;
+  min-width: 480px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+.container-form h1 {
+  text-align: center;
+  padding-top: 20px;
+  color: #ff8561;
+}
+
+.form-group {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.form-group input,
+select {
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  outline: none;
+}
+
+.instructions {
+  background-color: #fff;
+  height: 200px;
+  min-width: 255px;
+  font-size: 12px;
+  margin-left: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  text-indent: 30px;
+}
+
+ul {
+  list-style-position: inside;
+  margin: 10px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+  background-color: #ff8561;
+  color: #fff;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
