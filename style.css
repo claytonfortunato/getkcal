@@ -32,6 +32,15 @@ nav a {
   font-size: 1.2rem;
   font-weight: bold;
   color: #333;
+  background-color: rgba(221, 221, 221, 0.452);
+  padding: 8px;
+  border-radius: 24px;
+  opacity: 0.8;
+}
+
+nav a:hover {
+  opacity: 1;
+  color: #333;
 }
 
 .hero {
@@ -139,7 +148,8 @@ button {
 
 .main-protein,
 .main-carboidratos,
-.main-gordura {
+.main-gordura,
+.main-atividade {
   background-color: #eee;
   border: 1px solid black;
 
@@ -171,7 +181,7 @@ img {
   margin-top: 100px;
   border-radius: 10px;
 
-  border: 1px solid var(--cor-secondary);
+  border: 1px solid #eee;
 }
 
 [data-anime] {
@@ -222,4 +232,18 @@ img {
   border-radius: 10px;
 
   background-color: #f7c32585;
+}
+
+.activity {
+  max-width: 600px;
+  max-height: 700px;
+
+  font-size: 15px;
+
+  margin: 20px 20px 0 40px;
+  padding: 20px;
+  border: 1px solid var(--cor-secondary);
+  border-radius: 10px;
+
+  background-color: rgba(121, 119, 119, 0.432);
 }
