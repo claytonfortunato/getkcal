@@ -1,7 +1,19 @@
-const form = document.querySelector("#form");
-const btn = document.querySelector("#submit");
+const animation = document.querySelectorAll("[data-anime]");
 
-btn.addEventListener("submit", (e) => {
-  e.preventDefault;
-  console.log(btn);
+const animeScroll = () => {
+  const windowTop = window.pageYOffset + window.innerHeight * 0.7;
+
+  animation.forEach((e) => {
+    if (windowTop > e.offsetTop) {
+      e.classList.add("animate");
+    } else {
+      e.classList.remove("animate");
+    }
+  });
+};
+
+animeScroll();
+
+window.addEventListener("scroll", () => {
+  animeScroll();
 });
