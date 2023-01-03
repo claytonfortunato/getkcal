@@ -1,5 +1,32 @@
 const animation = document.querySelectorAll("[data-anime]");
 const buttonTop = document.querySelector(".btnTop");
+const buttonResult = document.querySelector("#form");
+
+buttonResult.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  handleButton;
+});
+
+const getSelectedValue = (id) => {
+  const select = document.getElementById(id);
+  return select.options[select.selectindex].value;
+};
+
+const getInputNumberValue = (id) => {
+  return Number(document.getElementById(id).value);
+};
+
+const handleButton = (event) => {
+  event.preventDefault();
+
+  const gender = getSelectedValue("gender");
+  const age = getInputNumberValue("age");
+  const weight = getInputNumberValue("weight");
+  const height = getInputNumberValue("height");
+
+  console.log(gender);
+};
 
 const animeScroll = () => {
   const windowTop = window.pageYOffset + window.innerHeight * 0.7;
