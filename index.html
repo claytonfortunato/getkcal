@@ -16,11 +16,11 @@
     />
 </head>
 <body>
-    <nav>
-        <a href="#">Proteinas</a>
-        <a href="#">Carboidratos</a>
-        <a href="#">Gorduras</a>
-        <a href="#">Atividades</a>
+    <nav class="menu">
+        <a href="#protein">Proteinas</a>
+        <a href="#carbo">Carboidratos</a>
+        <a href="#gordura">Gorduras</a>
+        <a href="#atividade">Atividades</a>
     </nav>
     
     
@@ -54,50 +54,57 @@
       </div>
   
         <div class="container-form">
-            <form id="form">
-              <h1>Gasto Calorico Basal</h1>
-            <div class="form-group">
-              <label for="age">Idade</label>
-              <input type="number" id="age" />
-            </div>
-  
-            <div class="form-group">
-              <label for="gender">Gênero</label>
-              <select name="gender" id="gender">
-                <option value="male">Masculino</option>
-                <option value="female">Feminino</option>
-              </select>
-            </div>
-  
-            <div class="form-group">
-              <label for="height">Altura</label>
-              <input type="number" id="height" placeholder="CM" />
-            </div>
-  
-            <div class="form-group">
-              <label for="weight">Peso</label>
-              <input type="number" id="weight" placeholder="KG" />
-            </div>
-  
-            <div class="form-group">
-              <label for="activity_level">Atividade Física</label>
-              <select name="activity_level" id="activity_level">
-                <option value="1.2">Sedentário: pouco ou nenhum exercício</option>
-                <option value="1.375">Leve: exercício 1-3 vezes/semana</option>
-                <option value="1.55" selected>Moderado: exercício 4-5 vezes/semana</option>
-                <option value="1725">
-                  Ativo: exercício intenso 6-7 vezes/semana
-                </option>
-                <option value="1.9">
-                  Muito Ativo: exercício diário muito intenso, ou trabalho físico
-                </option>
-              </select>
-            </div>
-  
-            <div class="form-group">
-              <button id="calcButton" type="submit">Calcular!</button>
-            </div>
-          </form>
+              <form id="form">
+                <h1>Gasto Calorico Basal</h1>
+                            <div class="form-group">
+                <label for="age">Idade</label>
+                <input type="number" id="age" data-input />
+                            </div>
+                  
+                            <div class="form-group">
+                <label for="gender">Gênero</label>
+                <select id="gender">
+                  <option value="male">Masculino</option>
+                  <option value="female">Feminino</option>
+                </select>
+                            </div>
+                  
+                            <div class="form-group">
+                <label for="height">Altura</label>
+                <input type="number" id="height" placeholder="CM" data-input  />
+                            </div>
+                  
+                            <div class="form-group">
+                <label for="weight">Peso</label>
+                <input type="number" id="weight" placeholder="KG" data-input  />
+                            </div>
+                  
+                            <div class="form-group">
+                <label for="activity_level">Atividade Física</label>
+                <select name="activity_level" id="activity_level">
+                  <option value="1.2">Sedentário: pouco ou nenhum exercício</option>
+                  <option value="1.375">Leve: exercício 1-3 vezes/semana</option>
+                  <option value="1.55">Moderado: exercício 4-5 vezes/semana</option>
+                  <option value="1.725">
+                    Ativo: exercício intenso 6-7 vezes/semana
+                  </option>
+                  <option value="1.9">
+                    Muito Ativo: exercício diário muito intenso, ou trabalho físico
+                  </option>
+                </select>
+                            </div>
+                  
+                            <div class="form-group">
+                <button data-result>Calcular!</button>
+                
+                </div>
+
+                <div class="form-group">
+                  <button data-clear>Limpar!</button>
+                </div>
+              </form>
+          
+          
           <div class="result-container" id="result">
               <!-- <h2>Resultado:</h2>
               <div class="result-content">     
@@ -166,7 +173,7 @@
     <picture>
       <!-- <source media="(max-width: 912px)" srcset="img/carboidratos-pq.jpg" > -->
       <!-- <source media="(max-width: 480px )" srcset="img/carboidratos-pp.jpg"> -->
-      <img src="img/carboidaratos.jpg" alt="Carboidratos" data-anime="up">
+      <img src="img/medio.jpg" alt="Carboidratos" data-anime="up">
     </picture>
   </section>
 
@@ -225,9 +232,17 @@
   
 </main>
 
+<footer id="footer">
+  <div class="footer">
+    <p>Site criado por Clayton Fortunato</p>
+  </div>
+</footer>
+
 <div class="btnTop">
   <i class="fa-solid fa-arrow-up"></i>
 </div>
+
+
 
   <script src="main.js"></script>
 </body>

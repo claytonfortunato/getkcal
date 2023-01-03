@@ -149,6 +149,7 @@ button {
   border: none;
   cursor: pointer;
   transition: 450ms;
+  margin-bottom: -20px;
 }
 
 .form-group button:hover {
@@ -156,20 +157,20 @@ button {
 }
 
 .result-container {
-  background-color: #ddd;
+  background-color: rgba(221, 221, 221, 0.541);
   margin: 15px;
   border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+.result-container ul li {
+  list-style-type: none;
 }
 
 .result-container h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.result-container p {
-  font-size: 1.5rem;
-  text-align: center;
 }
 
 .main-protein,
@@ -181,12 +182,12 @@ button {
 }
 
 .protein {
-  max-width: 500px;
+  max-width: 650px;
   min-height: 850px;
 
   font-size: 1.5rem;
 
-  margin: 20px 20px 0 40px;
+  margin: 20px 100px 0 100px;
   padding: 20px;
   border: 1px solid var(--cor-secondary);
   border-radius: 10px;
@@ -287,6 +288,16 @@ img {
   visibility: visible;
 }
 
+.footer {
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: var(--cor-primary);
+  color: #eee;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
 @media screen and (max-width: 912px) {
   .hero {
     max-width: 900px;
@@ -322,6 +333,9 @@ img {
     font-size: 1rem;
   }
 
+  .protein {
+  }
+
   .info_energetic {
     width: 300px;
   }
@@ -336,5 +350,12 @@ img {
 
   .protein {
     margin-top: 120px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .protein {
+    margin: 0px;
+    margin-top: 100px;
   }
 }
