@@ -11,25 +11,36 @@
   --cor-three: #e0b680;
 }
 
-body {
+html {
+  font-size: 62.5%;
+}
+
+html,
+body,
+main {
   width: 100%;
+  background-color: #eee;
 }
 
 nav {
   background-color: rgba(238, 238, 238, 0.089);
 
   width: 100%;
+  max-width: 980px;
   height: 10vh;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
+
+  margin: auto;
 }
 
 nav a {
+  margin: auto;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #333;
   background-color: rgba(221, 221, 221, 0.452);
@@ -52,26 +63,34 @@ nav a:hover {
 }
 
 section#img {
-  background-image: url(img/alimentacao.jpg);
+  background-image: url(./img/alimentacao.jpg);
   background-position: center center;
 
   background-size: cover;
   background-attachment: fixed;
+
+  width: 100%;
 }
 
 .info_energetic {
-  max-height: 800px;
-  max-width: 400px;
+  min-height: 400px;
+  width: 720px;
+  max-width: 980px;
   background-color: #fff;
   border-radius: 10px;
   margin-top: 20px;
   padding: 20px;
 }
 
+.info_energetic p {
+  font-size: 13px;
+}
+
 .container-form {
   margin-top: -100px;
-  max-height: 600px;
-  min-width: 480px;
+  min-height: 600px;
+  width: 90%;
+  max-width: 500px;
   background-color: #fff;
   border-radius: 10px;
   margin-left: 20px;
@@ -101,14 +120,14 @@ select {
 
 .instructions {
   background-color: #fff;
-  height: 200px;
-  min-width: 255px;
-  font-size: 14px;
+  width: 100%;
+  max-width: 980px;
+  width: 255px;
+  font-size: 1.4rem;
   margin-left: 10px;
   border-radius: 10px;
   padding: 10px;
   text-indent: 30px;
-  margin-top: -500px;
 }
 
 ul {
@@ -137,13 +156,20 @@ button {
 }
 
 .result-container {
-  font-size: 14px;
-
-  margin-top: 10px;
+  background-color: #ddd;
+  margin: 15px;
+  border-radius: 5px;
 }
 
-.result-content ul {
-  list-style: none;
+.result-container h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-container p {
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .main-protein,
@@ -151,23 +177,16 @@ button {
 .main-gordura,
 .main-atividade {
   background-color: #eee;
-  border: 1px solid black;
-
   display: flex;
-  flex-wrap: wrap;
-
-  height: 100vh;
-  width: 100%;
-  padding: 20px;
 }
 
 .protein {
-  max-width: 800px;
-  max-height: 850px;
+  max-width: 500px;
+  min-height: 850px;
 
-  font-size: 15px;
+  font-size: 1.5rem;
 
-  margin: 20px 0 0 40px;
+  margin: 20px 20px 0 40px;
   padding: 20px;
   border: 1px solid var(--cor-secondary);
   border-radius: 10px;
@@ -176,8 +195,7 @@ button {
 }
 
 img {
-  height: 660px;
-
+  width: 100%;
   margin-top: 100px;
   border-radius: 10px;
 
@@ -207,10 +225,10 @@ img {
 }
 
 .carboidratos {
-  max-width: 800px;
-  max-height: 700px;
+  max-width: 500px;
+  min-height: 850px;
 
-  font-size: 15px;
+  font-size: 1.5rem;
 
   margin: 20px 20px 0 40px;
   padding: 20px;
@@ -221,13 +239,10 @@ img {
 }
 
 .gorduras {
-  max-width: 500px;
-  max-height: 700px;
+  max-width: 470px;
+  min-height: 850px;
 
-  font-size: 15px;
-
-  margin: 20px 20px 0 40px;
-  padding: 20px;
+  font-size: 1.5rem;
   border: 1px solid var(--cor-secondary);
   border-radius: 10px;
 
@@ -235,10 +250,10 @@ img {
 }
 
 .activity {
-  max-width: 600px;
-  max-height: 700px;
+  max-width: 500px;
+  min-height: 750px;
 
-  font-size: 15px;
+  font-size: 1.5rem;
 
   margin: 20px 20px 0 40px;
   padding: 20px;
@@ -246,4 +261,80 @@ img {
   border-radius: 10px;
 
   background-color: rgba(121, 119, 119, 0.432);
+}
+
+.btnTop {
+  position: fixed;
+  bottom: 50px;
+  right: -100px;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(190, 190, 190);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 999;
+  opacity: 1;
+  visibility: hidden;
+  transition: all 0.6s ease;
+}
+
+.btnTop.active {
+  right: 50px;
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (max-width: 912px) {
+  .hero {
+    max-width: 900px;
+    display: flex;
+  }
+
+  .main-protein,
+  .main-carboidratos,
+  .main-gordura,
+  .main-atividade {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: auto;
+  }
+
+  section#img {
+    background-image: none;
+  }
+  .container-form {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .instructions {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  nav a {
+    font-size: 1rem;
+  }
+
+  .info_energetic {
+    width: 300px;
+  }
+
+  .hero {
+    display: inline-block;
+  }
+
+  .container-form {
+    margin-top: 25px;
+  }
+
+  .protein {
+    margin-top: 120px;
+  }
 }
